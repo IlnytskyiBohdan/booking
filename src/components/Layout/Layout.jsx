@@ -20,7 +20,8 @@ import hotels from "../../redux/hotels/slice";
 const theme = createTheme({
   palette: {
     primary: {
-      main: orange[500],
+      main: orange[900],
+      contrastText: "#000",
     },
   },
   typography: {
@@ -42,7 +43,7 @@ const Footer = () => (
     <Container>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" fontWeight={700} color="primary.main" sx={{ mb: 1 }}>
+          <Typography component="p" variant="h6" fontWeight={700} color="primary.main" sx={{ mb: 1 }}>
             Booking
           </Typography>
           <Typography variant="body2" color="text.secondary">
@@ -50,7 +51,7 @@ const Footer = () => (
           </Typography>
         </Grid>
         <Grid item xs={6} sm={2}>
-          <Typography variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
+          <Typography component="p" variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
             Company
           </Typography>
           {["About us", "Careers", "Press"].map((link) => (
@@ -60,7 +61,7 @@ const Footer = () => (
           ))}
         </Grid>
         <Grid item xs={6} sm={2}>
-          <Typography variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
+          <Typography component="p" variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
             Support
           </Typography>
           {["Help center", "Contact us", "Privacy"].map((link) => (
@@ -70,7 +71,7 @@ const Footer = () => (
           ))}
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Typography variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
+          <Typography component="p" variant="subtitle2" fontWeight={600} sx={{ mb: 1.5 }}>
             Popular Destinations
           </Typography>
           {["New York", "Boston", "Los Angeles", "Miami"].map((city) => (

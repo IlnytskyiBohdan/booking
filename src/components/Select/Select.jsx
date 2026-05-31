@@ -10,16 +10,20 @@ const Select = (props) => {
   const {
     options,
     label,
-    input: { onChange, value },
+    input: { onChange, value, name },
     meta,
     disabled,
   } = props;
   const error = meta.touched && meta.error;
+  const labelId = `${name}-label`;
+  const selectId = `${name}-select`;
 
   return (
     <FormControl fullWidth>
-      <InputLabel>{label}</InputLabel>
+      <InputLabel id={labelId} htmlFor={selectId}>{label}</InputLabel>
       <SelectMUI
+        labelId={labelId}
+        id={selectId}
         error={!!error}
         label={label}
         onChange={onChange}

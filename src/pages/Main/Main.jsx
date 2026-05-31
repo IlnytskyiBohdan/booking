@@ -19,11 +19,22 @@ const Main = () => (
         minHeight: { xs: 480, md: 520 },
         display: "flex",
         alignItems: "flex-end",
-        backgroundImage: `url(${import.meta.env.BASE_URL}images/hero.jpg)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
+      <Box
+        component="img"
+        src={`${import.meta.env.BASE_URL}images/hero.jpg`}
+        alt=""
+        fetchpriority="high"
+        sx={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
       <Box
         sx={{
           position: "absolute",

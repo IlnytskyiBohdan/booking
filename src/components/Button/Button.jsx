@@ -6,7 +6,6 @@ const Button = (props) => {
   const {
     reactHref,
     children,
-    color = "#fff",
     type = "button",
     disabled,
     loading,
@@ -23,7 +22,7 @@ const Button = (props) => {
     <ButtonMUI
       disabled={disabled}
       type={type}
-      sx={{ color, ...sx }}
+      sx={sx}
       variant='contained'
     >
       {reactHref ? (

@@ -13,7 +13,7 @@ export const Icon = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "#fff",
+  color: "#000",
   fontWeight: 700,
   fontSize: "18px",
   flexShrink: 0,
