@@ -1,20 +1,16 @@
-import axios from 'axios';
-import { API_URL } from '../constants/api'
+import dbData from '../../db.json';
 
-const instance = axios.create({
-    baseURL: API_URL
-});
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const api = {
-    getDestination() {
-        return instance.get('destination')
-    },
-    getHotels(params) {
-        return instance.get('hotels', {
-            params
-        })
-    }
+  async getDestination() {
+    await delay(300);
+    return { data: dbData.destination };
+  },
+  async getHotels() {
+    await delay(600);
+    return { data: dbData.hotels };
+  },
 };
 
 export default api;
-

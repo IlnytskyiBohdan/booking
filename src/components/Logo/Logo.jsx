@@ -5,7 +5,7 @@ import { Icon } from "../Header/styles.jsx";
 const Logo = () => {
   return (
     <Wrapper to={routes.main.path}>
-      <Icon />
+      <Icon>B</Icon>
       Booking
     </Wrapper>
   );

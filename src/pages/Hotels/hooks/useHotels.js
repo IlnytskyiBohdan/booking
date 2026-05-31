@@ -7,10 +7,11 @@ import { useEffect } from "react";
 export const useHotels = () => {
     const dispatch = useDispatch();
     const items = useSelector(selector.items);
+    const loading = useSelector(selector.loading);
 
     useEffect(() => {
         if(items.length === 0) dispatch(push(routes.main.path))
     }, []);
 
-    return { items }
+    return { items, loading }
 }

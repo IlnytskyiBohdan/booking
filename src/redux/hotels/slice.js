@@ -5,6 +5,8 @@ const hotels = createSlice({
     initialState: {
         items: [],
         loading: false,
+        error: null,
+        searchParams: null,
     },
     reducers: {
         setItems: (state, action) => {
@@ -12,7 +14,13 @@ const hotels = createSlice({
         },
         setLoading: (state, action) => {
             state.loading = action.payload;
-        }
+        },
+        setError: (state, action) => {
+            state.error = action.payload;
+        },
+        setSearchParams: (state, action) => {
+            state.searchParams = action.payload;
+        },
     }
 })
 
