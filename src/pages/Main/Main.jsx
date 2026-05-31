@@ -19,8 +19,7 @@ const Main = () => (
         minHeight: { xs: 480, md: 520 },
         display: "flex",
         alignItems: "flex-end",
-        backgroundImage:
-          "url(https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80)",
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/hero.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -35,6 +34,7 @@ const Main = () => (
       />
       <Box sx={{ position: "relative", p: { xs: 3, md: 5 }, width: "100%" }}>
         <Typography
+          component="h1"
           variant="h2"
           fontWeight={800}
           sx={{ color: "#fff", lineHeight: 1.1, mb: 1 }}
@@ -44,7 +44,7 @@ const Main = () => (
             Booking
           </Box>
         </Typography>
-        <Typography variant="h6" sx={{ color: "rgba(255,255,255,0.85)", mb: 3 }}>
+        <Typography component="p" variant="h6" sx={{ color: "rgba(255,255,255,0.85)", mb: 3 }}>
           Find the best hotels at the best prices. Book in minutes.
         </Typography>
         <Box
@@ -74,7 +74,7 @@ const Main = () => (
               "&:hover": { boxShadow: 3 },
             }}
           >
-            <Typography variant="h4" fontWeight={700} color="primary.main">
+            <Typography component="p" variant="h4" fontWeight={700} color="primary.main">
               {s.value}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
@@ -86,7 +86,7 @@ const Main = () => (
     </Grid>
 
     <Box sx={{ mb: 8 }}>
-      <Typography variant="h4" fontWeight={700} sx={{ mb: 1 }}>
+      <Typography component="h2" variant="h4" fontWeight={700} sx={{ mb: 1 }}>
         How It Works
       </Typography>
       <Typography color="text.secondary" sx={{ mb: 4 }}>
@@ -113,14 +113,16 @@ const Main = () => (
           <Grid item xs={12} md={4} key={item.step}>
             <Box sx={{ display: "flex", gap: 2 }}>
               <Typography
+                component="span"
                 variant="h3"
                 fontWeight={800}
+                aria-hidden="true"
                 sx={{ color: "primary.main", opacity: 0.25, lineHeight: 1, minWidth: 60 }}
               >
                 {item.step}
               </Typography>
               <Box>
-                <Typography variant="h6" fontWeight={600} sx={{ mb: 0.5 }}>
+                <Typography component="h3" variant="h6" fontWeight={600} sx={{ mb: 0.5 }}>
                   {item.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">

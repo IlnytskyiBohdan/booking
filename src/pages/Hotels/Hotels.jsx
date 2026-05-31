@@ -46,7 +46,7 @@ const Hotels = () => {
     <>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", mb: 3, flexWrap: "wrap", gap: 2 }}>
         <Box>
-          <Typography variant="h4" fontWeight={700}>Available Hotels</Typography>
+          <Typography component="h1" variant="h4" fontWeight={700}>Available Hotels</Typography>
           <Typography color="text.secondary" sx={{ mt: 0.5 }}>
             {loading ? "Searching..." : `${displayed.length} properties found`}
           </Typography>
@@ -88,7 +88,7 @@ const Hotels = () => {
           <Grid item xs={12}>
             <Box sx={{ textAlign: "center", py: 10 }}>
               <Typography fontSize={72} sx={{ mb: 2 }}>🏨</Typography>
-              <Typography variant="h5" fontWeight={600} sx={{ mb: 1 }}>
+              <Typography component="h2" variant="h5" fontWeight={600} sx={{ mb: 1 }}>
                 No hotels found
               </Typography>
               <Typography color="text.secondary" sx={{ mb: 3 }}>
@@ -107,12 +107,13 @@ const Hotels = () => {
               <Fade in timeout={200 + index * 40}>
                 <Box sx={{ height: "100%" }}>
                   <HotelItem
-                    id={hotel.id}
+                    image={hotel.image}
+                    name={hotel.name}
+                    description={hotel.description}
                     address={hotel.address}
                     city={hotel.city}
-                    countryCode={hotel.country_code}
-                    name={hotel.name}
                     state={hotel.state}
+                    countryCode={hotel.country_code}
                     hotelRating={hotel.hotel_rating}
                   />
                 </Box>

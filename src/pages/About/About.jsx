@@ -45,7 +45,7 @@ const About = () => (
         display: "flex",
         alignItems: "center",
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80)",
+          `url(${import.meta.env.BASE_URL}images/about-hero.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -58,10 +58,10 @@ const About = () => (
         }}
       />
       <Box sx={{ position: "relative", p: { xs: 4, md: 8 } }}>
-        <Typography variant="h2" fontWeight={800} sx={{ color: "#fff", mb: 2 }}>
+        <Typography component="h1" variant="h2" fontWeight={800} sx={{ color: "#fff", mb: 2 }}>
           About Booking
         </Typography>
-        <Typography variant="h6" sx={{ color: "rgba(255,255,255,0.85)", maxWidth: 540 }}>
+        <Typography component="p" variant="h6" sx={{ color: "rgba(255,255,255,0.85)", maxWidth: 540 }}>
           We're on a mission to make travel accessible, affordable, and stress-free for everyone.
         </Typography>
       </Box>
@@ -69,7 +69,7 @@ const About = () => (
 
     <Grid container spacing={6} sx={{ mb: 8, alignItems: "center" }}>
       <Grid item xs={12} md={6}>
-        <Typography variant="h4" fontWeight={700} sx={{ mb: 2 }}>
+        <Typography component="h2" variant="h4" fontWeight={700} sx={{ mb: 2 }}>
           Our Story
         </Typography>
         <Typography color="text.secondary" sx={{ mb: 2 }}>
@@ -86,7 +86,7 @@ const About = () => (
       <Grid item xs={12} md={6}>
         <Box
           component="img"
-          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80"
+          src={`${import.meta.env.BASE_URL}images/about-story.jpg`}
           alt="Hotel lobby"
           sx={{ width: "100%", borderRadius: 3, boxShadow: 4 }}
         />
@@ -94,7 +94,7 @@ const About = () => (
     </Grid>
 
     <Box sx={{ mb: 8 }}>
-      <Typography variant="h4" fontWeight={700} sx={{ mb: 1 }}>
+      <Typography component="h2" variant="h4" fontWeight={700} sx={{ mb: 1 }}>
         Why Choose Us
       </Typography>
       <Typography color="text.secondary" sx={{ mb: 5 }}>
@@ -117,7 +117,7 @@ const About = () => (
               <Typography fontSize={36} sx={{ mb: 1.5 }}>
                 {f.icon}
               </Typography>
-              <Typography variant="h6" fontWeight={600} sx={{ mb: 1 }}>
+              <Typography component="h3" variant="h6" fontWeight={600} sx={{ mb: 1 }}>
                 {f.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -139,7 +139,7 @@ const About = () => (
         color: "#fff",
       }}
     >
-      <Typography variant="h4" fontWeight={700} sx={{ mb: 1 }}>
+      <Typography component="h2" variant="h4" fontWeight={700} sx={{ mb: 1 }}>
         Ready to explore the world?
       </Typography>
       <Typography sx={{ opacity: 0.9 }}>
